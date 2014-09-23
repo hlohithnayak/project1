@@ -11,8 +11,8 @@ static int __init ofcd_init(void) /* Constructor */
 {
 	int ret;
 
-	printk(KERN_INFO "Namaskar: ofcd registered");
-	if ((ret = alloc_chrdev_region(&first, 0, 3, "Shweta")) < 0)
+	printk(KERN_INFO "GMDN: Lohith has registered his first driver");
+	if ((ret = alloc_chrdev_region(&first, 0, 3, "Sanav-Saanvi")) < 0)
 	{
 		return ret;
 	}
@@ -23,12 +23,12 @@ static int __init ofcd_init(void) /* Constructor */
 static void __exit ofcd_exit(void) /* Destructor */
 {
 	unregister_chrdev_region(first, 3);
-	printk(KERN_INFO "Alvida: ofcd unregistered");
+	printk(KERN_INFO "GMDN: Lohith has unregistered his first driver");
 }
 
 module_init(ofcd_init);
 module_exit(ofcd_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Anil Kumar Pugalia <email@sarika-pugs.com>");
+MODULE_AUTHOR("Lohith Nayak <hlohithnayak@gmail.com>");
 MODULE_DESCRIPTION("Our First Character Driver");
